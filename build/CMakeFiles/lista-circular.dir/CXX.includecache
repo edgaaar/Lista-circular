@@ -1,0 +1,28 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../include/ListaCircular.h
+Nodo.h
+../include/Nodo.h
+
+../include/Nodo.h
+iostream
+-
+
+/home/edgar/Programas/Lista-circular/src/ListaCircular.cpp
+ListaCircular.h
+/home/edgar/Programas/Lista-circular/src/ListaCircular.h
+
+/home/edgar/Programas/Lista-circular/src/Nodo.cpp
+Nodo.h
+/home/edgar/Programas/Lista-circular/src/Nodo.h
+
+/home/edgar/Programas/Lista-circular/src/main.cpp
+ListaCircular.h
+/home/edgar/Programas/Lista-circular/src/ListaCircular.h
+

@@ -1,0 +1,1 @@
+/usr/bin/c++      CMakeFiles/lista-circular.dir/src/Nodo.cpp.o CMakeFiles/lista-circular.dir/src/main.cpp.o CMakeFiles/lista-circular.dir/src/ListaCircular.cpp.o  -o lista-circular -rdynamic 
