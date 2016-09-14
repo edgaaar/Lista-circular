@@ -1,11 +1,13 @@
 #include "ListaCircular.h"
 
+//Constructor vacío. Crea una lista de elementos nulos.
 ListaCircular::ListaCircular()
 {
 	this->H=NULL;
 	this->T=NULL;
 }
 
+//Constructor que recibe el dato del primer nodo que se creará.
 ListaCircular::ListaCircular(int Dato)
 {
 	Nodo * aux= new Nodo(Dato);
@@ -15,6 +17,7 @@ ListaCircular::ListaCircular(int Dato)
 	H = T;
 }
 
+//Verifica si la lista está vacía, de así serlo regresa TRUE
 bool ListaCircular::ListaCircularVacia()
 {
 	if (this->H == NULL && this->T == NULL)
@@ -22,6 +25,7 @@ bool ListaCircular::ListaCircularVacia()
 	return false;
 }
 
+//Añde un elemento al final de la lista.
 void ListaCircular::Add(int Dato)
 {
 	Nodo* aux = new Nodo(Dato,this->H);
@@ -36,6 +40,7 @@ void ListaCircular::Add(int Dato)
 	this->T = aux;
 }
 
+//Muestra los elementos contenidos en la lista.
 void ListaCircular::Show()
 {
 	if (!ListaCircularVacia())
@@ -52,9 +57,10 @@ void ListaCircular::Show()
 	{
 		std::cout<<"La lista está vacía"<<std::endl;
 	}
-
 }
 
+/*Añade un elemento justo después del nodo que como dato tiene la referencia buscada.
+El método recibe el dato del nuevo nodo (Dato) y la referencia (Ref)*/
 void ListaCircular::AddRef(int Dato, int Ref)
 {
 	if(ListaCircularVacia())
@@ -74,6 +80,7 @@ void ListaCircular::AddRef(int Dato, int Ref)
 	}
 }
 
+//Elimina al primer nodo, regresando el dato que contenía (FIFO).
 int ListaCircular::Remove(void)
 {
 	if(!ListaCircularVacia())
@@ -100,6 +107,7 @@ int ListaCircular::Remove(void)
 	}	
 }
 
+//Elimina al nodo que contenga como dato la referencia.
 void ListaCircular::RemoveRef(int Ref)
 {
 	if(!ListaCircularVacia())
@@ -117,11 +125,9 @@ void ListaCircular::RemoveRef(int Ref)
 				aux = aux->getSig();
 			}
 			aux2->setSig(aux->getSig());
-			
 		}
 		else
 		{
-
 			while(aux != T)
 			{
 				aux2 = aux;
@@ -159,6 +165,7 @@ Nodo* ListaCircular::BuscarElemento(int Dato)
 	}
 }
 
+//Asigna a H y a T como elementos nulos. Se obtiene una lista vacía.
 void ListaCircular::VaciarListaCircular(void)
 {
 	this->H = NULL;
